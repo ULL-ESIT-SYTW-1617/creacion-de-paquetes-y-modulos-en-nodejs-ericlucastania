@@ -19,6 +19,7 @@ para ello donde está su nombre pondremos <%= variable %>
 Entendiendo el proceso del minimist, una vez instalado el módulo vemos que podemos separar argumentos,
 y así poder acceder a cada uno de los parámetros, por ahora tenemos esto.
 
+
         var argv = require('minimist')(process.argv.slice(2));
         console.dir(argv.a);
         

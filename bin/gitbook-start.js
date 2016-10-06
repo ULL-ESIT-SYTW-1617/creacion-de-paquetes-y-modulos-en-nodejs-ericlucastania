@@ -5,18 +5,17 @@ var ejs = require('ejs');
 var fs = require ('fs-extra');
 var argv = require('minimist')(process.argv.slice(2));
 
-var direct = process.cwd() + '/';
+
 
 // expresión regular que caza con .ejs
-
+var direct = process.cwd() + '/';
 var re = /.ejs/g;
 var ruta = path.join(__dirname);
 
-/*
-if (argv.h || argv.help || (!argv.a) || !argv.b || !argv.c || !argv.d || !argv.e){
-    console.log("holi");
-}
-*/
+
+if ((argv.a) || argv.b || argv.c || argv.d || argv.e){
+    //console.log("holi");
+
 
 // Creamos la carpeta
 
@@ -75,5 +74,9 @@ function recursive(names,folder){
 };
 
 recursive(names,'');
+}
+else {
+    console.log("Maaaaaal");
+}
 
 

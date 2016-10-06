@@ -57,7 +57,7 @@ add_maintainer() {
 update_maintainers() {
   echo "# Last update: $(date)" > $FILE
   buffer=
-  git log --format='%an <%ae>' > $FILE.tmp
+# git log --format='%an <%ae>' > $FILE.tmp
   while read i; do
     add_maintainer "$i"
   done < $FILE.tmp

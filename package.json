@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-ericlucastania",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Repo to start gitbook proyect",
   "main": "index.js",
   "scripts": {
@@ -34,13 +34,12 @@
   "homepage": "https://github.com/enten/gitbook-boilerplate#readme",
   "devDependencies": {
     "async": "^1.4.0",
+    "ejs": "^2.5.2",
+    "fs": "0.0.1-security",
     "fs-extra": "^0.22.1",
     "gh-pages": "^0.3.1",
+    "gitbook": "^2.1.0",
     "gitbook-cli": "^0.3.4",
-    "gitbook": "^2.1.0"
-  },
-  "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-ejs": "^2.2.1"
+    "minimist": "^1.2.0"
   }
 }

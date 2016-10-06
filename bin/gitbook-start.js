@@ -39,7 +39,10 @@ function recursive(names,folder){
                 
                 autor:{
                     name: argv.a,
-                    repourl: argv.b
+                    repourl: argv.b,
+                    issuesurl: argv.c,
+                    readmeurl: argv.d,
+                    wikiurl: argv.e
                 }
                 
             },function(err,data){if(err){console.log(err)} else{return data}});

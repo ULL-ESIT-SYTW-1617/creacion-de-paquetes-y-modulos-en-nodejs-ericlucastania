@@ -60,6 +60,51 @@ problemas con el módulo fs, usamos el ncp
 
 No tenemos ni idea de como seguir avanzando :)
 Se supone que tenemos que compilar los templates pero a saber como se hace xD
-
 Con el gulp-ejs se puede compilar un archivo .ejs, ahora solo faltaría cambiarle la extensión y fuera
 pero primero tenemos que llamar al gulp desde el script de node
+
+## Quinto paso
+
+Olvidemos todo lo anterior, ahora quitamos el módulo ncp para que no nos copie todo los archivos en 
+la nueva carpeta y lo que hacemos es renderizar de template, guardarlo todo en 
+una variable y esa variable escribirla con fs en la nueva carpeta. Hemos usado 
+expresiones regulares para que cuando lo introduzca en la nueva carpeta le borre la 
+extensión ejs. Quedandonos los archivos perfectamente, como al principio.
+
+Nos queda algo así:
+
+    var names = fs.readdirSync('../template');
+
+    function recursive(names,folder){
+        for (var i in names){
+            
+            if(names[i].match(re)){
+            
+                //probando el render
+                var data = ejs.renderFile('../template/'+ folder + names[i],{
+                    
+                    autor:{
+                        name: argv.a,
+                        repourl: argv.b
+                    }
+                    
+                },function(err,data){if(err){console.log(err)} else{return data}});
+                
+                
+                var newstr = names[i].replace(re, '');
+                console.log(newstr);
+               
+                fs.writeFile('../' + argv.a + '/' + folder + newstr, data, (err) => {
+                  if (err) throw err;
+                  console.log('It\'s saved!');
+                });
+            }
+            else{
+                fs.mkdirsSync('../' + argv.a + '/' +names[i]);
+                recursive(fs.readdirSync('../template/' + names[i]),names[i] + '/')
+            }
+        }
+    };
+    recursive(names,'');
+    
+Queda poner bonito el código y preguntar si esto está bien al profesor.

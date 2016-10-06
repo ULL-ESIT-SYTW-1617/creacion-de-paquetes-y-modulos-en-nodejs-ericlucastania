@@ -2,7 +2,31 @@
 
 ![](./images/npm.PNG)
 
-## Tutorial de como hacer la práctica
+
+## Así funciona
+
+![](./images/gif.GIF)
+
+
+## Enlaces interesantes 
+ 
+* [Repositorio de la práctica](https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-ericlucastania.git).
+* [Descripción de la práctica.](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicanm.html#práctica-creación-de-un-paquete-npm)
+
+
+## Datos de partida
+
+* [Repositorio Inicial Templates](https://github.com/enten/gitbook-boilerplate) 
+
+## Componentes del grupo de trabajo
+
+* [Eric Ramos](https://github.com/alu0100786330)
+* [Lucas Ruiz](https://github.com/alu0100785265)
+* [Tania González](https://github.com/tania77)
+
+
+
+# Tutorial de como hacer la práctica
 
 ## Descripción de la misma
 
@@ -55,7 +79,7 @@ Cambiaremos el nombre del hombre que hizo el repo inicial por una variable que s
 para ello, donde está su nombre pondremos <%= variable %>
 
 
-## Cuenta en npm 
+### Cuenta en npm 
 
 Empezaremos con esto creandonos una cuenta en npm, una vez creada. Desde la línea de comandos 
 asociaremos nuestro espacio de trabajo con el de la cuenta mediante npm adduser. Una vez asociado 
@@ -121,7 +145,4 @@ para crear la carpeta donde ubicaremos los scripts renderizados, necesitamos acc
 usuario, es decir a la carpeta donde esté trabajando. Para ello usamos el comando process.cwd()
 
 
-## Componentes del grupo de trabajo
-* [Eric Ramos](https://github.com/alu0100786330)
-* [Lucas Ruiz](https://github.com/alu0100785265)
-* [Tania González](https://github.com/tania77)
+

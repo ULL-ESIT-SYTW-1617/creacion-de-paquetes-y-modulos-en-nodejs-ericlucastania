@@ -12,6 +12,21 @@ var direct = process.cwd() + '/';
 var re = /.ejs/g;
 var ruta = path.join(__dirname);
 
+var opcionesValidas = ['a', 'b', 'c', 'd', 'e'];
+function comprobarOpcion(opc) {
+    for (var i=0; i<opcionesValidas.length; i++) {
+        if (opcionesValidas[i] == opc)
+            return true;
+        else
+            return false;
+        
+    }
+}
+for (var opc in argv){
+    if (!comprobarOpcion(opc))
+        console.log("muy maaal");
+}
+
 
 if ((argv.a) || argv.b || argv.c || argv.d || argv.e){
     //console.log("holi");

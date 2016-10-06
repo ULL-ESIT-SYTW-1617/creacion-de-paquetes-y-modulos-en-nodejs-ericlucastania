@@ -1,7 +1,7 @@
 {
-  "name": "gitbook-start-ericlucastania",
-  "version": "0.2.17",
-  "description": "Repo to start gitbook proyect",
+  "name": "",
+  "version": "0.0.1",
+  "description": "GitBook Boilerplate",
   "main": "index.js",
   "scripts": {
     "generate-gitbook": "./scripts/losh generate-gitbook",
@@ -15,41 +15,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/enten/gitbook-boilerplate.git",
-    "wiki": "https://github.com/enten/gitbook-boilerplate.wiki.git"
+    "url": "",
+    "wiki": ""
   },
   "keywords": [
     "gitbook",
     "boilerplate",
     "starter"
   ],
-  "bin": {
-    "gitbook-start": "./bin/gitbook-start.js"
-  },
-  "author": "Steven Enten <steven@enten.fr>",
+  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/enten/gitbook-boilerplate/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/enten/gitbook-boilerplate#readme",
+  "homepage": "",
   "devDependencies": {
     "async": "^1.4.0",
-    "ejs": "^2.5.2",
-    "fs": "0.0.1-security",
     "fs-extra": "^0.22.1",
     "gh-pages": "^0.3.1",
-    "gitbook": "^2.1.0",
     "gitbook-cli": "^0.3.4",
-    "minimist": "^1.2.0"
-  },
-  "dependencies": {
-    "async": "^1.4.0",
-    "ejs": "^2.5.2",
-    "fs": "0.0.1-security",
-    "fs-extra": "^0.22.1",
-    "gh-pages": "^0.3.1",
-    "gitbook": "^2.1.0",
-    "gitbook-cli": "^0.3.4",
-    "minimist": "^1.2.0"
+    "gitbook": "^2.1.0"
   }
 }

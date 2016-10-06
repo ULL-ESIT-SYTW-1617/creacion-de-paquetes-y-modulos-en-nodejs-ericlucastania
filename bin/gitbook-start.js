@@ -1,40 +1,47 @@
 #!/usr/bin/env node
 
+var path = require('path');
 var ejs = require('ejs');
 var fs = require ('fs-extra');
 var argv = require('minimist')(process.argv.slice(2));
 
-
+var direct = process.cwd() + '/';
 
 // expresión regular que caza con .ejs
 
 var re = /.ejs/g;
+var ruta = path.join(__dirname);
 
+/*
+if (argv.h || argv.help || (!argv.a) || !argv.b || !argv.c || !argv.d || !argv.e){
+    console.log("holi");
+}
+*/
 
 // Creamos la carpeta
 
-fs.mkdirsSync(argv.a);
+fs.mkdirsSync(direct + argv.a);
 
 //Ver los nombres de los archivos dentro de las carpetas
 
-var names = fs.readdirSync('node_modules/gitbook-start-ericlucastania/template');
+var names = fs.readdirSync(ruta + '/..' + '/template/');
 
 
 
 function recursive(names,folder){
     for (var i in names){
-        
+    
         if(names[i].match(re)){
         
             //Renderizamos el fichero
-            var data = ejs.renderFile('node_modules/gitbook-start-ericlucastania/template/'+ folder + names[i],{
+            var data = ejs.renderFile(ruta + '/..' + '/template/' + folder + names[i],{
                 
                 autor:{
-                    name: argv.a,
-                    repourl: argv.b,
-                    issuesurl: argv.c,
-                    readmeurl: argv.d,
-                    wikiurl: argv.e
+                    name: argv.autor,
+                    repourl: argv.repo,
+                    issuesurl: argv.issue,
+                    readmeurl: argv.readme,
+                    wikiurl: argv.wiki
                 }
                 
             },function(err,data){
@@ -56,13 +63,13 @@ function recursive(names,folder){
             
             
            
-            fs.writeFile(argv.a + '/' + folder + newstr, data, (err) => {
+            fs.writeFile(direct + argv.a + '/' + folder + newstr, data, (err) => {
               if (err) throw err;
             });
         }
         else{
-            fs.mkdirsSync(argv.a + '/' +names[i]);
-            recursive(fs.readdirSync('node_modules/gitbook-start-ericlucastania/template/' + names[i]),names[i] + '/')
+            fs.mkdirsSync(direct + argv.a + '/' +names[i]);
+            recursive(fs.readdirSync(ruta + '/..' + '/template/' + names[i]),names[i] + '/')
         }
     }
 };

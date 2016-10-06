@@ -1,5 +1,5 @@
-# Empezando a tope
-
+## Creación de un paquete npm 
+![](./images/npm.PNG)
 ## Tutorial de como hacer la práctica
 
 ### Primer Paso

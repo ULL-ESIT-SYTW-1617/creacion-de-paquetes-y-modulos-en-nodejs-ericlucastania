@@ -38,5 +38,9 @@
     "gh-pages": "^0.3.1",
     "gitbook-cli": "^0.3.4",
     "gitbook": "^2.1.0"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-ejs": "^2.2.1"
   }
 }

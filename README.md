@@ -8,7 +8,7 @@ Empezamos borrando todo y añadiendo las carpetas bin para meter el script que s
 nuestro paquete npm. También metemos la carpeta template que tendrá los ficheros que pasarán a ser
 la estructura principal de nuestro proyecto. 
 
-### Segundo paso 
+### Segundo paso
 
 Cambiaremos el nombre del hombre que hizo el repo inicial por una variable que se sustituirá posteriormente
 para ello donde está su nombre pondremos <%= variable %>
@@ -58,3 +58,8 @@ problemas con el módulo fs, usamos el ncp
     });
 
 
+No tenemos ni idea de como seguir avanzando :)
+Se supone que tenemos que compilar los templates pero a saber como se hace xD
+
+Con el gulp-ejs se puede compilar un archivo .ejs, ahora solo faltaría cambiarle la extensión y fuera
+pero primero tenemos que llamar al gulp desde el script de node

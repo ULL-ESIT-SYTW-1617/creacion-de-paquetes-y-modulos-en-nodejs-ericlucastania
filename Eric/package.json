@@ -1,5 +1,5 @@
 {
-  "name": "<%= autor.repo %>",
+  "name": "Eric",
   "version": "0.0.1",
   "description": "GitBook Boilerplate",
   "main": "index.js",
@@ -15,20 +15,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "<%= autor.repourl %>",
-    "wiki": "<%= autor.wikiurl %>"
+    "url": "pepe.com",
+    "wiki": ""
   },
   "keywords": [
     "gitbook",
     "boilerplate",
     "starter"
   ],
-  "author": "<%= autor.name %>",
+  "author": "Eric",
   "license": "MIT",
   "bugs": {
-    "url": "<%= autor.issuesurl %>"
+    "url": ""
   },
-  "homepage": "<%= autor.readmeurl %>",
+  "homepage": "",
   "devDependencies": {
     "async": "^1.4.0",
     "fs-extra": "^0.22.1",

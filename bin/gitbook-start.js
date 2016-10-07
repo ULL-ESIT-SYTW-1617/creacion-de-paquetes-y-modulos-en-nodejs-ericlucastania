@@ -52,7 +52,7 @@ if (flag){
                 var data = ejs.renderFile(ruta + '/..' + '/template/' + folder + names[i],{
                     
                     autor:{
-                        name: argv.a || "paco",
+                        name: argv.a,
                         repourl: argv.r,
                         issuesurl: argv.i,
                         readmeurl: argv.f,

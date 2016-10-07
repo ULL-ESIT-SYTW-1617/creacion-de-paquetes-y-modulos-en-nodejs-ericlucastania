@@ -5,7 +5,7 @@
 ## Opciones
 
     node gitbook-start [OPTIONS]
-        **-d nombre del directorio a crear node gitbook-star -d miDirectorio**
+        -d nombre del directorio a crear node gitbook-star -d miDirectorio
         -a autor del libro a crear node gitbook-star -a AutorDelLibro
         -r repositorio github contra el que se va a trabajar -r github.com/repo.git
         -i direcion a la que se pueden reportar los bugs (en forma de issues de github) -i github.com/repo/issues

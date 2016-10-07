@@ -27,7 +27,6 @@ var flag = true;
 var sum=0;
 for (var i in argv) {
     if ((sum !=0) && (sum%2 == 0)) {
-        
         if(comprobarOpcion(i)==false){
             flag = false;
             break;
@@ -38,56 +37,55 @@ for (var i in argv) {
 
 
 if (flag){
-
-
-// Creamos la carpeta
-fs.mkdirsSync(direct + argv.d);
-
-//Ver los nombres de los archivos dentro de las carpetas
-var names = fs.readdirSync(ruta + '/..' + '/template/');
-
-function recursive(names,folder){
-    for (var i in names){
     
-        if(names[i].match(re)){
+    // Creamos la carpeta
+    fs.mkdirsSync(direct + argv.d);
+    
+    //Ver los nombres de los archivos dentro de las carpetas
+    var names = fs.readdirSync(ruta + '/..' + '/template/');
+    
+    function recursive(names,folder){
+        for (var i in names){
         
-            //Renderizamos el fichero
-            var data = ejs.renderFile(ruta + '/..' + '/template/' + folder + names[i],{
-                
-                autor:{
-                    name: argv.a,
-                    repourl: argv.r,
-                    issuesurl: argv.i,
-                    readmeurl: argv.f,
-                    wikiurl: argv.w
-                }
-                
-            },function(err,data){
-                if(err){
-                    throw err;
-                    
-                } else{
-                    return data;
-                    
-                }
-            });
+            if(names[i].match(re)){
             
-            //sustituimos el nombre, para quitarle la extensión ejs
-            
-            var newstr = names[i].replace(re, '');
-           
-            fs.writeFile(direct + argv.d + '/' + folder + newstr, data, (err) => {
-              if (err) throw err;
-            });
-        }
-        else{
-            fs.mkdirsSync(direct + argv.d + '/' +names[i]);
-            recursive(fs.readdirSync(ruta + '/..' + '/template/' + names[i]),names[i] + '/');
+                //Renderizamos el fichero
+                var data = ejs.renderFile(ruta + '/..' + '/template/' + folder + names[i],{
+                    
+                    autor:{
+                        name: argv.a,
+                        repourl: argv.r,
+                        issuesurl: argv.i,
+                        readmeurl: argv.f,
+                        wikiurl: argv.w
+                    }
+                    
+                },function(err,data){
+                    if(err){
+                        throw err;
+                        
+                    } else{
+                        return data;
+                        
+                    }
+                });
+                
+                //sustituimos el nombre, para quitarle la extensión ejs
+                
+                var newstr = names[i].replace(re, '');
+               
+                fs.writeFile(direct + argv.d + '/' + folder + newstr, data, (err) => {
+                  if (err) throw err;
+                });
+            }
+            else{
+                fs.mkdirsSync(direct + argv.d + '/' +names[i]);
+                recursive(fs.readdirSync(ruta + '/..' + '/template/' + names[i]),names[i] + '/');
+            }
         }
     }
-}
-
-recursive(names,'');
+    
+    recursive(names,'');
 }
 else {
     console.log("node gitbook-start [OPTIONS]\n"+

@@ -20,9 +20,6 @@
 
 ```$ gitbook-start -d MiLibro -a Jack```
 
-## Así funciona
-
-![](./images/gif.GIF)
 
 
 ## Enlaces interesantes 

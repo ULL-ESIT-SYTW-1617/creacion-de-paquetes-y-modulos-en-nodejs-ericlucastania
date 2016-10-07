@@ -26,13 +26,7 @@
   "bin": {
     "gitbook-start": "./bin/gitbook-start.js"
   },
-  
-  { "name" : "foo", "version" : "1.2.3",
-  "description" : "A packaged foo fooer for fooing foos",
-  "main" : "foo.js",
-  "man" : "./man/ayuda.md"
-}
-  "author": "Steven Enten <steven@enten.fr>",
+  "author": "Eric Ramos, Lucas Ruiz, Tania Gonzalez",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/enten/gitbook-boilerplate/issues"

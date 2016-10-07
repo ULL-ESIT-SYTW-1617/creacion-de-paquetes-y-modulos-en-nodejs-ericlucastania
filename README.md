@@ -13,6 +13,13 @@
         -w direccion web de la wiki en github -w github.com/repo.wiki.git
 
 
+## Ejemplo
+
+```bash
+npm install gitbook-start-ericlucastania
+node gitbook-start -d MiLibro -a Jack
+```
+
 ## Así funciona
 
 ![](./images/gif.GIF)
@@ -22,7 +29,7 @@
  
 * [Repositorio de la práctica](https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-ericlucastania.git).
 * [Descripción de la práctica.](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicanm.html#práctica-creación-de-un-paquete-npm)
-
+* [NPM](https://www.npmjs.com/package/gitbook-start-ericlucastania)
 
 ## Datos de partida
 

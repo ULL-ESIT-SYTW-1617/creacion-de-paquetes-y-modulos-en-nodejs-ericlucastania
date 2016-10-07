@@ -15,10 +15,10 @@
 
 ## Ejemplo
 
-```{r, engine='bash', count_lines}
-npm install gitbook-start-ericlucastania
-node gitbook-start -d MiLibro -a Jack
-```
+
+```$npm install gitbook-start-ericlucastania```
+
+```$node gitbook-start -d MiLibro -a Jack```
 
 ## Así funciona
 

@@ -26,6 +26,14 @@
   "bin": {
     "gitbook-start": "./bin/gitbook-start.js"
   },
+  "man": [
+    "./man/ayuda.md"
+  ],
+  { "name" : "foo", "version" : "1.2.3",
+  "description" : "A packaged foo fooer for fooing foos",
+  "main" : "foo.js",
+  "man" : "./man/ayuda.md"
+}
   "author": "Steven Enten <steven@enten.fr>",
   "license": "MIT",
   "bugs": {

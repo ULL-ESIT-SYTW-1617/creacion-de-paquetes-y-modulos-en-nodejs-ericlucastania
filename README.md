@@ -1,6 +1,16 @@
-## Creación de un paquete npm 
+# Creación de un paquete npm 
 
 ![](./images/npm.PNG)
+
+Opciones
+
+    node gitbook-start [OPTIONS]
+        -d nombre del directorio a crear node gitbook-star -d miDirectorio
+        -a autor del libro a crear node gitbook-star -a AutorDelLibro
+        -r repositorio github contra el que se va a trabajar -r github.com/repo.git
+        -i direcion a la que se pueden reportar los bugs (en forma de issues de github) -i github.com/repo/issues
+        -f fichero readme del libro -f github.com/repo#readme.md
+        -w direccion web de la wiki en github -w github.com/repo.wiki.git
 
 
 ## Así funciona
@@ -23,6 +33,10 @@
 * [Eric Ramos](https://github.com/alu0100786330)
 * [Lucas Ruiz](https://github.com/alu0100785265)
 * [Tania González](https://github.com/tania77)
+
+
+
+
 
 
 
@@ -90,7 +104,7 @@ podremos enviar nuestro directorio hacia npm mediante el comando npm publish.
 
 Entendiendo el proceso del minimist. 
     
-    Una vez instalado el módulo vemos que podemos separar argumentos,y así poder acceder a
+Una vez instalado el módulo vemos que podemos separar argumentos,y así poder acceder a
 cada uno de los parámetros, por ahora tenemos esto.
 
 
@@ -100,7 +114,7 @@ cada uno de los parámetros, por ahora tenemos esto.
         
         
         if(argv.a){
-            console.log("hola me llamo Eric");
+            console.log("hola me llamo Idelfonso");
             
         }
 
@@ -109,13 +123,17 @@ cada uno de los parámetros, por ahora tenemos esto.
 Ahora el objetivo sería empezar a planificar el script, y ver que hacemos con los .ejs como podemos 
 traducirlos para que se copien, para ello seguramente tendremos que hacer uso de alguno de los módulos
 de node que nos permita copiar carpetas. Veamos el módulo Filesystem.
-
 fs-extra que es el que nos venía nos permite crear una carpeta con un parámetro que le pasemos, en
-este caso usamos la a para indicar el nombre. 1 paso listooo :) un paso menos.
+este caso usamos la a para indicar el nombre.
 
-        
-        fs.mkdirsSync('../'+argv.a);
+       var direct = process.cwd() + '/';
 
+       fs.mkdirsSync(direct + argv.a);
+
+Haciendo los anteriores comandos conseguimos que cuanndo cree un nuevo directorio
+lo cree a partir de la ruta actual en la que está ejecutando el comando
+
+        gitbook-start -a DIR
 
 ## Renderizar los archivos y pasarlos a otra carpeta
 

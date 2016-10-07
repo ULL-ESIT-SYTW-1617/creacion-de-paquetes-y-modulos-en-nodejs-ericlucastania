@@ -18,9 +18,8 @@ function comprobarOpcion(opc) {
     for (var i=0; i<opcionesValidas.length; i++) {
         if ((opcionesValidas[i] == opc))
             return true;
-        else
-            return false;
     }
+    return false;
 }
 
 var flag = true;
@@ -88,7 +87,7 @@ if (flag){
     recursive(names,'');
 }
 else {
-    console.log("node gitbook-start [OPTIONS]\n"+
+    console.log("gitbook-start [OPTIONS]\n"+
     "-d nombre del directorio a crear node gitbook-star -d miDirectorio\n"+
     "-a autor del libro a crear node gitbook-star -a AutorDelLibro\n"+
     "-r repositorio github contra el que se va a trabajar -r github.com/repo.git\n"+

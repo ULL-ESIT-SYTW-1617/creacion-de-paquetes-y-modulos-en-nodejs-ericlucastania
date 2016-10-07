@@ -4,7 +4,7 @@
 
 ## Opciones
 
-    node gitbook-start [OPTIONS]
+    gitbook-start [OPTIONS]
         -d nombre del directorio a crear node gitbook-star -d miDirectorio
         -a autor del libro a crear node gitbook-star -a AutorDelLibro
         -r repositorio github contra el que se va a trabajar -r github.com/repo.git
@@ -18,7 +18,7 @@
 
 ```$npm install gitbook-start-ericlucastania```
 
-```$node gitbook-start -d MiLibro -a Jack```
+```$ gitbook-start -d MiLibro -a Jack```
 
 ## Así funciona
 

@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-ericlucastania",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "Repo to start gitbook proyect",
   "main": "index.js",
   "scripts": {

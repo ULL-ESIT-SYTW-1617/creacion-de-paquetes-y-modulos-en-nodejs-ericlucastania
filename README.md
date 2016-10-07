@@ -2,7 +2,7 @@
 
 ![](./images/npm.PNG)
 
-Opciones
+## Opciones
 
     node gitbook-start [OPTIONS]
         -d nombre del directorio a crear node gitbook-star -d miDirectorio

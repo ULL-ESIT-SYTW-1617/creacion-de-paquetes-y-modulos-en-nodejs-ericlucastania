@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-ericlucastania",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Repo to start gitbook proyect",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/enten/gitbook-boilerplate.git",
-    "wiki": "https://github.com/enten/gitbook-boilerplate.wiki.git"
+    "url": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-ericlucastania",
+    "wiki": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-ericlucastania/wiki"
   },
   "keywords": [
     "gitbook",
@@ -29,9 +29,9 @@
   "author": "Eric Ramos, Lucas Ruiz, Tania Gonzalez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/enten/gitbook-boilerplate/issues"
+    "url": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-ericlucastania/issues"
   },
-  "homepage": "https://github.com/enten/gitbook-boilerplate#readme",
+  "homepage": "https://github.com/ULL-ESIT-SYTW-1617/creacion-de-paquetes-y-modulos-en-nodejs-ericlucastania/blob/master/README.md",
   "devDependencies": {
     "async": "^1.4.0",
     "ejs": "^2.5.2",

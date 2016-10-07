@@ -52,7 +52,7 @@ if (flag){
                 var data = ejs.renderFile(ruta + '/..' + '/template/' + folder + names[i],{
                     
                     autor:{
-                        name: argv.a,
+                        name: argv.a || "paco",
                         repourl: argv.r,
                         issuesurl: argv.i,
                         readmeurl: argv.f,
@@ -92,8 +92,9 @@ else {
     "-a autor del libro a crear node gitbook-star -a AutorDelLibro\n"+
     "-r repositorio github contra el que se va a trabajar -r github.com/repo.git\n"+
     "-i direcion a la que se pueden reportar los bugs (en forma de issues de github) -i github.com/repo/issues\n" +
-    "-f fichero readme del libro -f github.com/repo#readme.md\n"+
-    "-w direccion web de la wiki en github -w github.com/repo.wiki.git\n");
+    "-f url de la homepage del libro -f github.com/repo#readme.md\n"+
+    "-w direccion web de la wiki en github -w github.com/repo.wiki.git\n"+
+    "-h muestra ayuda sobre las opciones disponibles\n");
 }
 
 

@@ -1,6 +1,6 @@
 # Creación de un paquete npm 
 
-![](./images/npm.PNG)
+![](http://arunoda.me/images/blog/npm-love-github-thumb.png)
 
 ## Opciones
 
@@ -8,9 +8,10 @@
         -d nombre del directorio a crear node gitbook-star -d miDirectorio
         -a autor del libro a crear node gitbook-star -a AutorDelLibro
         -r repositorio github contra el que se va a trabajar -r github.com/repo.git
-        -i direcion a la que se pueden reportar los bugs (en forma de issues de github) -i github.com/repo/issues
-        -f fichero readme del libro -f github.com/repo#readme.md
+        -i direccion a la que se pueden reportar los bugs (en forma de issues de github) -i github.com/repo/issues
+        -f url de la homepage del libro -f github.com/repo#readme.md
         -w direccion web de la wiki en github -w github.com/repo.wiki.git
+        -h muestra ayuda sobre las opciones disponibles
 
 
 ## Ejemplo
@@ -122,7 +123,7 @@ cada uno de los parámetros, por ahora tenemos esto.
             
         }
 
-![fotoTercerPaso](./images/1.PNG)
+![fotoTercerPaso](https://drive.google.com/open?id=0B1maJox0P5XqcDh2bFlpVS1KQ0E)
 
 Ahora el objetivo sería empezar a planificar el script, y ver que hacemos con los .ejs como podemos 
 traducirlos para que se copien, para ello seguramente tendremos que hacer uso de alguno de los módulos

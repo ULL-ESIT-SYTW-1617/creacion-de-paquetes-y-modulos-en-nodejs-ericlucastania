@@ -1,6 +1,9 @@
-# Creación de un paquete npm 
-
 ![](http://arunoda.me/images/blog/npm-love-github-thumb.png)
+
+# Descripción
+
+Creación de un libro automatizado, nuestro paquete te ayudará a optimizar tiempo en la creación
+de una estructura para gitbook.
 
 ## Opciones
 
@@ -123,7 +126,6 @@ cada uno de los parámetros, por ahora tenemos esto.
             
         }
 
-![fotoTercerPaso](https://drive.google.com/open?id=0B1maJox0P5XqcDh2bFlpVS1KQ0E)
 
 Ahora el objetivo sería empezar a planificar el script, y ver que hacemos con los .ejs como podemos 
 traducirlos para que se copien, para ello seguramente tendremos que hacer uso de alguno de los módulos

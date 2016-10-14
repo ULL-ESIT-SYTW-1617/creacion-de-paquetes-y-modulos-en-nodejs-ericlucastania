@@ -1,7 +1,7 @@
 # Creación de un paquete npm 
 
 ![](http://arunoda.me/images/blog/npm-love-github-thumb.png)
-
+        
 ## Opciones
 
     gitbook-start [OPTIONS]
@@ -123,7 +123,7 @@ cada uno de los parámetros, por ahora tenemos esto.
             
         }
 
-![fotoTercerPaso](https://drive.google.com/open?id=0B1maJox0P5XqcDh2bFlpVS1KQ0E)
+
 
 Ahora el objetivo sería empezar a planificar el script, y ver que hacemos con los .ejs como podemos 
 traducirlos para que se copien, para ello seguramente tendremos que hacer uso de alguno de los módulos
@@ -139,6 +139,9 @@ Haciendo los anteriores comandos conseguimos que cuanndo cree un nuevo directori
 lo cree a partir de la ruta actual en la que está ejecutando el comando
 
         gitbook-start -a DIR
+        
+![](https://3.bp.blogspot.com/-061V7BZkTrc/V_eBj69cnwI/AAAAAAAAAAM/BkPvsm_gfuEchnDu3jYyD6IOlluZzHvHgCLcB/s1600/a.PNG)
+
 
 ## Renderizar los archivos y pasarlos a otra carpeta
 

@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-ericlucastania",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Repo to start gitbook proyect",
   "main": "index.js",
   "scripts": {
@@ -41,6 +41,7 @@
     "gitbook": "^2.1.0",
     "gitbook-cli": "^0.3.4",
     "minimist": "^1.2.0"
+    
   },
   "dependencies": {
     "async": "^1.4.0",
@@ -51,5 +52,6 @@
     "gitbook": "^2.1.0",
     "gitbook-cli": "^0.3.4",
     "minimist": "^1.2.0"
+    
   }
 }

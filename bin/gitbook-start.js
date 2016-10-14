@@ -4,9 +4,8 @@ var path = require('path');
 var ejs = require('ejs');
 var fs = require ('fs-extra');
 var argv = require('minimist')(process.argv.slice(2));
-
-
-
+var gitConfig = require('git-config');
+//var tania = require('lucas');
 // expresión regular que caza con .ejs
 var direct = process.cwd() + '/';
 var re = /.ejs/g;
@@ -33,12 +32,24 @@ for (var i in argv) {
     }
     sum += 2;
 };
+var defaultname;
+var defaultautor;
+var defaultdir = "mi_libro";
+
+
+gitConfig(function (err, config) {
+  defaultautor = config.user.name;
+ // defaultautor = config.github.user;
+  console.log (defaultautor);
+  
 
 
 if (flag){
-    
+    var autor = argv.a || defaultautor;
     // Creamos la carpeta
-    fs.mkdirsSync(direct + argv.d);
+    var dir = argv.d || defaultdir;
+    //dir = argv.d || 'la vida';
+    fs.mkdirsSync(direct + dir);
     
     //Ver los nombres de los archivos dentro de las carpetas
     var names = fs.readdirSync(ruta + '/..' + '/template/');
@@ -52,7 +63,7 @@ if (flag){
                 var data = ejs.renderFile(ruta + '/..' + '/template/' + folder + names[i],{
                     
                     autor:{
-                        name: argv.a,
+                        name: autor,
                         repourl: argv.r,
                         issuesurl: argv.i,
                         readmeurl: argv.f,
@@ -73,12 +84,12 @@ if (flag){
                 
                 var newstr = names[i].replace(re, '');
                
-                fs.writeFile(direct + argv.d + '/' + folder + newstr, data, (err) => {
+                fs.writeFile(direct + dir + '/' + folder + newstr, data, (err) => {
                   if (err) throw err;
                 });
             }
             else{
-                fs.mkdirsSync(direct + argv.d + '/' +names[i]);
+                fs.mkdirsSync(direct + dir + '/' +names[i]);
                 recursive(fs.readdirSync(ruta + '/..' + '/template/' + names[i]),names[i] + '/');
             }
         }
@@ -86,6 +97,8 @@ if (flag){
     
     recursive(names,'');
 }
+
+
 else {
     console.log("gitbook-start [OPTIONS]\n"+
     "-d nombre del directorio a crear node gitbook-star -d miDirectorio\n"+
@@ -96,5 +109,5 @@ else {
     "-w direccion web de la wiki en github -w github.com/repo.wiki.git\n"+
     "-h muestra ayuda sobre las opciones disponibles\n");
 }
-
+})
 

@@ -129,10 +129,6 @@ cada uno de los parámetros, por ahora tenemos esto.
             
         }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 2175f403f1909a084c62749c01c4ba457bf28503
 
 Ahora el objetivo sería empezar a planificar el script, y ver que hacemos con los .ejs como podemos 
 traducirlos para que se copien, para ello seguramente tendremos que hacer uso de alguno de los módulos

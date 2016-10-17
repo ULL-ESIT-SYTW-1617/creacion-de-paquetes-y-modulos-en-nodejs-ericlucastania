@@ -1,14 +1,13 @@
 ![](http://arunoda.me/images/blog/npm-love-github-thumb.png)
-<<<<<<< HEAD
-        
-=======
+
+
 
 # Descripción
 
 Creación de un libro automatizado, nuestro paquete te ayudará a optimizar tiempo en la creación
 de una estructura para gitbook.
 
->>>>>>> 2175f403f1909a084c62749c01c4ba457bf28503
+
 ## Opciones
 
     gitbook-start [OPTIONS]
